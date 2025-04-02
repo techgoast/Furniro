@@ -1,0 +1,78 @@
+footer {
+  padding: 50px 0 0;
+  border-top: 1px solid #d9d9d9;
+}
+footer .data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .data div {
+  width: 25%;
+}
+footer .data ul {
+  width: 20%;
+}
+footer .logo p {
+  padding-top: 50px;
+  color: var(--p-light-color);
+  font-weight: 600;
+  font-size: 16px;
+}
+footer h3 {
+  padding-bottom: 50px;
+  color: var(--p-light-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+footer .data ul li {
+  padding-bottom: 50px;
+}
+footer .data ul li a {
+  font-weight: 600;
+  font-size: 16px;
+}
+footer form input {
+  outline: none;
+  border: none;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid black;
+}
+footer form input[type="email"]::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  color: #d9d9d9;
+}
+footer form input[type="submit"] {
+  background-color: white;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+}
+footer .copy-wright {
+  margin-top: 20px;
+  padding: 50px 0;
+  border-top: 1px solid #d9d9d9;
+}
+@media (max-width: 991px) {
+  footer .data div {
+    width: calc((100% - 20px) / 2);
+  }
+  footer .data ul {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+  footer .data {
+    justify-content: center;
+  }
+  footer .data div {
+    width: calc(100% - 20px);
+  }
+  footer .data ul {
+    width: calc(100% - 20px);
+  }
+}

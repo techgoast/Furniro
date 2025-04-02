@@ -1,0 +1,155 @@
+.check-out form .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.check-out form .container > div {
+  width: 45%;
+}
+.check-out form .container .inputs > div {
+  margin: 30px 0;
+}
+.check-out form .container .inputs .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.check-out form .container .inputs .name > div {
+  width: 45%;
+}
+.check-out form .container .inputs > div label {
+  font-weight: 500;
+  font-size: 16px;
+}
+.check-out form .container .inputs > div input,
+.check-out form .container .inputs > div select,
+.check-out form .container .inputs textarea {
+  display: block;
+  margin: 20px 0;
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: 1px solid var(--light-border-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.check-out form .container .inputs > div select,
+.check-out form .container .inputs textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--p-color);
+}
+.check-out form .container .inputs textarea {
+  height: 80px;
+  resize: none;
+}
+/* #### */
+.check-out form .container .check-info {
+  padding: 50px 0;
+}
+.check-out form .container .check-info .product-info {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--light-border-color);
+}
+.check-out form .container .check-info .product-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.check-out form .container .check-info .product-info div p {
+  font-size: 16px;
+}
+.check-out form .container .check-info .product-info div p:first-child {
+  font-weight: 400;
+}
+.check-out form .container .check-info .product-info div p:last-child {
+  font-weight: 300;
+}
+.check-out
+  form
+  .container
+  .check-info
+  .product-info
+  .products-details
+  p:first-child {
+  color: var(--p-color);
+}
+.check-out
+  form
+  .container
+  .check-info
+  .product-info
+  .products-details
+  p:first-child
+  span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+}
+.check-out form .container .check-info .product-info .heading p {
+  font-weight: 500 !important;
+  font-size: 24px;
+}
+.check-out form .container .check-info .product-info .total p:last-child {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--golden-color);
+}
+.check-out form .container .check-info .billing-info > div {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--p-color);
+}
+.check-out
+  form
+  .container
+  .check-info
+  .billing-info
+  > div
+  input[checked]
+  + label {
+  color: #000000;
+}
+.check-out form .container .check-info .billing-info > div label {
+  margin-left: 15px;
+}
+.check-out form .container .check-info .billing-info > div p {
+  margin: 15px 0;
+  font-weight: 300;
+}
+.check-out form .container .check-info .billing-info .hint2 {
+  margin-bottom: 40px;
+}
+.check-out form .container .check-info .billing-info .hint2 span {
+  font-weight: 600;
+}
+.check-out form .container .check-info .submit {
+  text-align: center;
+}
+.check-out form .container .check-info .submit input[type="submit"] {
+  padding: 20px 100px;
+  outline: none;
+  border: 1px solid var(--light-border-color);
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  .check-out form .container {
+    justify-content: space-around;
+  }
+  .check-out form .container > div {
+    width: 90%;
+  }
+}

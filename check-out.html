@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chek-out</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/page-header.css" />
+    <link rel="stylesheet" href="assets/css/features.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/chek-out.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <div class="image">
+            <img src="assets/images/logo.png" alt="logo" />
+          </div>
+          <div class="text">Furniro</div>
+        </div>
+        <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="navigators">
+          <ul class="links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="shop.html">Shop</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="icons">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping cart-side"></i>
+            <div class="cart-side-bar">
+              <div class="top">
+                <h2>Shopping Cart</h2>
+                <div class="cart-products">
+                  <div class="product">
+                    <div class="image">
+                      <img
+                        src="assets/images/cart-side-bar1.png"
+                        alt="cart-side-bar1"
+                      />
+                    </div>
+                    <div class="info">
+                      <h3>Asgaard sofa</h3>
+                      <p>
+                        <span>1 x</span>
+                        <span>Rs. 250,000.00</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="product">
+                    <div class="image">
+                      <img
+                        src="assets/images/cart-side-bar2.jfif"
+                        alt="cart-side-bar2"
+                      />
+                    </div>
+                    <div class="info">
+                      <h3>Casaliving Wood</h3>
+                      <p>
+                        <span>1 x</span>
+                        <span>Rs. 270,000.00</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom">
+                <p class="sub-total">
+                  <span>Subtotal</span>
+                  <span>Rs. 520,000.00</span>
+                </p>
+                <div class="actions">
+                  <a href="cart.html">Cart</a>
+                  <a href="check-out.html">Check Out</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="page-header">
+      <div class="content">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="logo" />
+        </div>
+        <h1>Checkout</h1>
+        <div class="path">
+          <span>Home <i class="fa-solid fa-angle-right"></i></span>
+          <span>Checkout</span>
+        </div>
+      </div>
+    </header>
+    <section class="check-out">
+      <form action="">
+        <div class="container">
+          <div class="inputs">
+            <h2>Billing details</h2>
+            <div class="name">
+              <div class="first">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" />
+              </div>
+              <div class="last">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" />
+              </div>
+            </div>
+            <div class="comp-name">
+              <label for="coname">Company Name (Optional)</label>
+              <input type="text" name="coname" id="coname" />
+            </div>
+            <div class="country">
+              <label for="country">Country / Region</label>
+              <select name="country" id="country" autocomplete="on">
+                <option value="sri Lanka">Sri Lanka</option>
+                <option value="egypt">Egypt</option>
+                <option value="syria">Syria</option>
+                <option value="us">United States</option>
+                <option value="england">England</option>
+              </select>
+            </div>
+            <div class="address">
+              <label for="address">Street address</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                autocomplete="on"
+              />
+            </div>
+            <div class="city">
+              <label for="city">Town / City</label>
+              <input type="text" name="city" id="city" />
+            </div>
+            <div class="province">
+              <label for="province">Province</label>
+              <select name="province" id="province" autocomplete="on">
+                <option value="western">Western Province</option>
+                <option value="eastern">Eastern Province</option>
+                <option value="northern">Northern Province</option>
+                <option value="southernn">Southernn Province</option>
+              </select>
+            </div>
+            <div class="zip">
+              <label for="zip">ZIP code</label>
+              <input type="text" name="zip" id="zip" />
+            </div>
+            <div class="Phone">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" autocomplete="on" />
+            </div>
+            <div class="custmail">
+              <label for="custmail">Email address</label>
+              <input type="email" name="custmail" id="custmail" />
+            </div>
+            <textarea
+              name="additional"
+              id="additional"
+              placeholder="Additional information"
+            ></textarea>
+          </div>
+          <div class="check-info">
+            <div class="product-info">
+              <div class="heading">
+                <p>Product</p>
+                <p>Subtotal</p>
+              </div>
+              <div class="products-details">
+                <p>Asgaard sofa <span>x 1</span></p>
+                <p>Rs. 250,000.00</p>
+              </div>
+              <div class="subtotal">
+                <p>Subtotal</p>
+                <p>Rs. 250,000.00</p>
+              </div>
+              <div class="total">
+                <p>Total</p>
+                <p>Rs. 250,000.00</p>
+              </div>
+            </div>
+            <div class="billing-info">
+              <div class="option option1">
+                <input
+                  type="radio"
+                  name="transfer-method"
+                  id="dbt"
+                  value="dbt"
+                  checked
+                />
+                <label for="dbt">Direct Bank Transfer</label>
+                <p class="hint1">
+                  Make your payment directly into our bank account. Please use
+                  your Order ID as the payment reference. Your order will not be
+                  shipped until the funds have cleared in our account.
+                </p>
+              </div>
+              <div class="option option2">
+                <input
+                  type="radio"
+                  name="transfer-method"
+                  id="dct"
+                  value="dct"
+                />
+                <label for="dct">Direct Cash Transfer</label>
+              </div>
+              <div class="option option3">
+                <input
+                  type="radio"
+                  name="transfer-method"
+                  id="cod"
+                  value="cod"
+                />
+                <label for="cod">Cash On Delivery</label>
+              </div>
+              <p class="hint2">
+                Your personal data will be used to support your experience
+                throughout this website, to manage access to your account, and
+                for other purposes described in our <span>privacy policy</span>.
+              </p>
+            </div>
+            <div class="submit">
+              <input type="submit" value="Place Order" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="features">
+      <div class="container">
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="text">
+            <h3>High Quality</h3>
+            <p>crafted from top materials</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-award"></i></div>
+          <div class="text">
+            <h3>Warranty Protection</h3>
+            <p>Over 2 years</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="text">
+            <h3>Free Shipping</h3>
+            <p>Order over 150 $</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-headset"></i></div>
+          <div class="text">
+            <h3>24 / 7 Support</h3>
+            <p>Dedicated support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="data">
+          <div class="logo">
+            <h2>Funiro.</h2>
+            <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+          </div>
+          <ul class="links">
+            <h3>Links</h3>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.hml">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="help">
+            <h3>Help</h3>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Privacy Policies</a></li>
+          </ul>
+          <div class="subscribe">
+            <h3>Newsletter</h3>
+            <form action="">
+              <input
+                type="email"
+                placeholder="Enter Your Email Address"
+                name="my-email"
+                id="my-email"
+              />
+              <input type="submit" value="SUBSCRIBE" />
+            </form>
+          </div>
+        </div>
+        <p class="copy-wright">2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
