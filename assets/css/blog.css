@@ -40,24 +40,35 @@
   color: var(--p-color);
   margin-bottom: 30px;
 }
-.blog .container .articles article a {
+.blog .container .articles article .hide {
+  display: none;
+}
+.blog .container .articles article button {
   font-weight: 400;
   font-size: 16px;
   position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: block;
+  margin-top: 20px;
 }
-.blog .container .articles article a::after {
+.blog .container .articles article button.hide {
+  display: none;
+}
+.blog .container .articles article button::before {
   content: "";
-  width: 90%;
+  width: 50%;
   height: 2px;
   background-color: #000000;
   position: absolute;
   bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  left: 0;
+  transition: 0.1s linear;
+}
+.blog .container .articles article button:hover::before {
+  width: 100%;
 }
 .blog .container aside {
   width: 28%;

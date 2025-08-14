@@ -50,6 +50,7 @@ nav .menu {
   width: 5%;
   height: 40px;
   display: none;
+  cursor: pointer;
 }
 nav .menu span {
   width: 80%;
@@ -61,7 +62,7 @@ nav .menu span {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-nav .menu:hover + .navigators {
+nav .menu + .navigators.show {
   display: flex;
   width: 100%;
   background-color: white;
@@ -70,13 +71,13 @@ nav .menu:hover + .navigators {
   right: 0;
   z-index: 100;
 }
-nav .menu:hover + .navigators .links,
-nav .menu:hover + .navigators .icons {
+nav .menu + .navigators.show .links,
+nav .menu + .navigators.show .icons {
   flex-direction: column;
   align-items: flex-end;
 }
-nav .menu:hover + .navigators .links li,
-nav .menu:hover + .navigators .icons svg {
+nav .menu + .navigators.show .links li,
+nav .menu + .navigators.show .icons button {
   margin: 20px 10px;
 }
 nav .navigators .icons {
@@ -85,7 +86,7 @@ nav .navigators .icons {
 nav .navigators .icons .cart-side-bar {
   display: none;
 }
-nav .navigators .icons .cart-side:hover + .cart-side-bar {
+nav .navigators .icons .cart-side + .cart-side-bar.show {
   width: 420px;
   height: 750px;
   padding: 15px;

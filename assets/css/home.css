@@ -134,9 +134,14 @@
 .our-products .products .product .over-lay .options svg {
   margin-right: 5px;
 }
-.our-products .show-more {
+.our-products .show-more,
+.our-products .show-less {
   margin-top: 50px;
   text-align: center;
+}
+.our-products .show-more.hide,
+.our-products .show-less.hide {
+  display: none;
 }
 /* #### */
 .inspiration {
@@ -161,7 +166,7 @@
   justify-content: center;
 }
 .inspiration .slider .show {
-  width: 400px;
+  width: 370px;
   height: 580px;
   margin-right: 10px;
 }
@@ -174,9 +179,10 @@
 }
 .inspiration .slider .gallery .images {
   display: flex;
+  overflow: hidden;
 }
 .inspiration .slider .gallery img {
-  width: 370px;
+  width: 300px;
   height: 480px;
   margin-right: 10px;
 }
@@ -201,7 +207,7 @@
 }
 .inspiration .slider .next {
   position: absolute;
-  right: 10px;
+  right: 10%;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

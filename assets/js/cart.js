@@ -1,0 +1,71 @@
+let cartBody = document.getElementById("cart-body");
+let subTotal = document.getElementById("sub-total");
+let total = document.getElementById("total");
+
+let cartData = [];
+
+window.addEventListener("load", async () => {
+  let res = await fetch("/assets/apis/cart.json");
+  let data = await res.json();
+  cartData = [...data.orders];
+  cartUI(cartData);
+  totalUI(cartData);
+});
+
+function cartUI(data) {
+  for (let i = 0; i < data.length; i++) {
+    cartBody.innerHTML += `
+      <tr>
+        <td>
+          <div class="image">
+            <img
+              src="${data[i].image}"
+              alt="product${i}"
+            />
+          </div>
+          <span>${data[i].product}</span>
+        </td>
+        <td>Rs. ${data[i].price}</td>
+        <td>
+          <input type="text" id="quantity${i}" name="quantity${i}" value="${
+      data[i].quantity
+    }" />
+        </td>
+        <td id="total-price${i}">Rs. ${(
+      data[i].quantity * data[i].price
+    ).toLocaleString()}</td>
+        <td><i class="fa-solid fa-trash"></i></td>
+      </tr>
+    `;
+  }
+  assignEvents(cartData);
+}
+
+function totalUI(data) {
+  let totalAmount = data.reduce((acc, item) => {
+    return acc + item.quantity * item.price;
+  }, 0);
+  subTotal.innerHTML += `Rs ${totalAmount.toLocaleString()}`;
+  total.innerHTML += `Rs ${totalAmount.toLocaleString()}`;
+}
+
+function assignEvents(data) {
+  let inputs = document.querySelectorAll("td input");
+  inputs.forEach((input, i) => {
+    input.addEventListener("change", (e) => {
+      handleChange(i, data, e.target.value);
+    });
+  });
+}
+
+function handleChange(i, data, n) {
+  data = data.map((item, j) => {
+    return j === i ? { ...item, quantity: n } : item;
+  });
+  cartData = [...data];
+  cartBody.innerHTML = "";
+  subTotal.innerHTML = "";
+  total.innerHTML = "";
+  cartUI(cartData);
+  totalUI(cartData);
+}

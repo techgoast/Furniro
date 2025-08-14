@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is furniture home page" />
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,12 +32,12 @@
           </div>
           <div class="text">Furniro</div>
         </div>
-        <div class="menu">
+        <div class="menu" id="nav-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="navigators">
+        <div class="navigators" id="nav-navigator">
           <ul class="links">
             <li>
               <a href="index.html">Home</a>
@@ -52,11 +53,19 @@
             </li>
           </ul>
           <div class="icons">
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-cart-shopping cart-side"></i>
-            <div class="cart-side-bar">
+            <button>
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-heart"></i>
+            </button>
+            <button class="cart-side" id="shopping-cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <div class="cart-side-bar" id="cart-side-bar">
               <div class="top">
                 <h2>Shopping Cart</h2>
                 <div class="cart-products">
@@ -71,7 +80,7 @@
                       <h3>Asgaard sofa</h3>
                       <p>
                         <span>1 x</span>
-                        <span>Rs. 250,000.00</span>
+                        <span>Rs. 2,500.00</span>
                       </p>
                     </div>
                   </div>
@@ -86,7 +95,7 @@
                       <h3>Casaliving Wood</h3>
                       <p>
                         <span>1 x</span>
-                        <span>Rs. 270,000.00</span>
+                        <span>Rs. 2,700.00</span>
                       </p>
                     </div>
                   </div>
@@ -95,7 +104,7 @@
               <div class="bottom">
                 <p class="sub-total">
                   <span>Subtotal</span>
-                  <span>Rs. 520,000.00</span>
+                  <span>Rs. 5,200.00</span>
                 </p>
                 <div class="actions">
                   <a href="cart.html">Cart</a>
@@ -116,7 +125,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
-          <button class="btn">BUY Now</button>
+          <button class="btn"><a href="/shop.html">BUY Now</a></button>
         </div>
       </div>
     </section>
@@ -149,208 +158,12 @@
     <section class="our-products">
       <div class="container">
         <h2>Our Products</h2>
-        <div class="products">
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="-30%"
-          >
-            <div class="image">
-              <img src="assets/images/product1.webp" alt="product1" />
-            </div>
-            <div class="content">
-              <h3>Syltherine</h3>
-              <p>Stylish cafe chair</p>
-              <p class="price">
-                <span>Rp 2.500.000</span>
-                <span>Rp 3.500.000</span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a href="single-product.html" class="product">
-            <div class="image">
-              <img src="assets/images/product2.webp" alt="product2" />
-            </div>
-            <div class="content">
-              <h3>Leviosa</h3>
-              <p>Stylish cafe chair</p>
-              <p class="price">
-                <span>Rp 2.500.000</span>
-                <span></span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="-50%"
-          >
-            <div class="image">
-              <img src="assets/images/product3.webp" alt="product3" />
-            </div>
-            <div class="content">
-              <h3>Lolito</h3>
-              <p>Luxury big sofa</p>
-              <p class="price">
-                <span>Rp 7.000.000</span>
-                <span>Rp 14.000.000</span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="New"
-          >
-            <div class="image">
-              <img src="assets/images/product4.webp" alt="product4" />
-            </div>
-            <div class="content">
-              <h3>Respira</h3>
-              <p>Outdoor bar table and stool</p>
-              <p class="price">
-                <span>Rp 500.000</span>
-                <span></span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a href="single-product.html" class="product">
-            <div class="image">
-              <img src="assets/images/product5.webp" alt="product5" />
-            </div>
-            <div class="content">
-              <h3>Grifo</h3>
-              <p>Night lamp</p>
-              <p class="price">
-                <span>Rp 1.500.000</span>
-                <span></span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="New"
-          >
-            <div class="image">
-              <img src="assets/images/product6.webp" alt="product6" />
-            </div>
-            <div class="content">
-              <h3>Muggo</h3>
-              <p>Small mug</p>
-              <p class="price">
-                <span>Rp 150.000</span>
-                <span></span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="-50%"
-          >
-            <div class="image">
-              <img src="assets/images/product7.webp" alt="product7" />
-            </div>
-            <div class="content">
-              <h3>Pingky</h3>
-              <p>Cute bed set</p>
-              <p class="price">
-                <span>Rp 7.000.000</span>
-                <span>Rp 14.000.000</span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-          <a
-            href="single-product.html"
-            class="product"
-            data-before=""
-            dicount="New"
-          >
-            <div class="image">
-              <img src="assets/images/product8.webp" alt="product8" />
-            </div>
-            <div class="content">
-              <h3>Potty</h3>
-              <p>Minimalist flower pot</p>
-              <p class="price">
-                <span>Rp 500.000</span>
-                <span></span>
-              </p>
-            </div>
-            <div class="over-lay">
-              <button class="btn-light">Add to cart</button>
-              <div class="options">
-                <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-                <span><i class="fa-solid fa-code-compare"></i>compare</span>
-                <span><i class="fa-solid fa-heart"></i>like</span>
-              </div>
-            </div>
-          </a>
-        </div>
+        <div class="products" id="products"></div>
         <div class="show-more">
-          <button class="btn-light">Show More</button>
+          <button class="btn-light" id="show-more">Show More</button>
+        </div>
+        <div class="show-less hide">
+          <button class="btn-light" id="show-less">Show Less</button>
         </div>
       </div>
     </section>
@@ -362,24 +175,16 @@
             Our designer already made a lot of beautiful prototipe of rooms that
             inspire you
           </p>
-          <button class="btn">Explore More</button>
+          <button class="btn"><a href="/shop.html">Explore More</a></button>
         </div>
         <div class="slider">
-          <div class="show">
-            <img src="assets/images/inspire1.webp" alt="inspire1" />
-          </div>
+          <div class="show" id="showIns"></div>
           <div class="gallery">
-            <div class="images">
-              <img src="assets/images/inspire2.webp" alt="inspire2" />
-              <img src="assets/images/inspire3.webp" alt="inspire3" />
+            <div class="images" id="gallery"></div>
+            <div class="dots" id="dots"></div>
+            <div class="next" id="nextP">
+              <i class="fa-solid fa-angle-right"></i>
             </div>
-            <div class="dots">
-              <div class="active"></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div class="next"><i class="fa-solid fa-angle-right"></i></div>
           </div>
         </div>
       </div>
@@ -422,7 +227,7 @@
           </div>
           <ul class="links">
             <h3>Links</h3>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.hml">About</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -435,18 +240,26 @@
           </ul>
           <div class="subscribe">
             <h3>Newsletter</h3>
-            <form action="">
+            <form action="" id="subscribe-form">
               <input
                 type="email"
                 placeholder="Enter Your Email Address"
-                name="my-email"
-                id="my-email"
+                name="subscribe-email"
+                id="subscribe-email"
               />
               <input type="submit" value="SUBSCRIBE" />
             </form>
           </div>
         </div>
         <p class="copy-wright">2023 furino. All rights reverved</p>
+      </div>
+      <div id="subscribe-res" class="subscribe-res hide">
+        <div class="subscribe-success hide" id="subscribe-success">
+          Thank you For Your Subscribtion
+        </div>
+        <div class="subscribe-failed hide" id="subscribe-failed">
+          Please Enter Your Email
+        </div>
       </div>
     </footer>
     <script
@@ -455,5 +268,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="/assets/js/nav.js"></script>
+    <script src="/assets/js/home.js"></script>
   </body>
 </html>

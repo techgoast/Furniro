@@ -1,3 +1,6 @@
+.check-out {
+  position: relative;
+}
 .check-out form .container {
   display: flex;
   flex-wrap: wrap;
@@ -144,6 +147,35 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   cursor: pointer;
+}
+.check-out .hide {
+  display: none;
+}
+.check-out .form-res {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-size: 36px;
+  font-weight: bold;
+}
+.check-out .form-res .form-success {
+  color: green;
+}
+.check-out .form-res .form-failed {
+  color: red;
+}
+.check-out .form-res.hide,
+.check-out .form-res .form-success.hide,
+.check-out .form-res .form-failed.hide {
+  display: none;
 }
 @media (max-width: 800px) {
   .check-out form .container {

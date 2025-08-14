@@ -14,10 +14,13 @@
   font-weight: 400;
   font-size: 20px;
 }
-.filter .left span:last-child {
+.filter .left > span:last-child {
   padding-left: 20px;
   border-left: 2px solid var(--p-color);
   font-size: 16px;
+}
+.filter .left svg {
+  cursor: default;
 }
 .filter .right form {
   font-weight: 400;
@@ -45,11 +48,12 @@
 .shop .container .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
 }
 .shop .container .products .product {
   width: calc((100% - 45px) / 4);
   margin-top: 30px;
+  margin-right: 10px;
   position: relative;
   background-color: #f4f5f7;
 }
@@ -128,6 +132,7 @@
   }
   .shop .container .products .product {
     width: calc((100% - 30px) / 3);
+    margin-right: 0;
   }
 }
 @media (max-width: 767px) {

@@ -40,7 +40,7 @@ ul {
 svg {
   cursor: pointer;
 }
-button {
+button:not(nav button) {
   border: 1px solid var(--golden-color);
   outline: none;
   padding: 10px 30px;
@@ -54,6 +54,12 @@ button {
 }
 .btn-light {
   color: var(--golden-color);
+}
+.btn a {
+  color: white;
+}
+nav button {
+  border: none;
 }
 [data-before]::before {
   content: attr(dicount);
@@ -79,12 +85,14 @@ button {
   background-color: #2ec1ac;
 }
 .pages-navigator {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pages-navigator div {
+.pages-navigator.parent {
+  margin-top: 20px;
+}
+.pages-navigator .child {
   width: 60px;
   height: 60px;
   font-weight: 300;
@@ -93,7 +101,6 @@ button {
   background-color: var(--second-bckg-color);
   text-align: center;
   line-height: 60px;
-  cursor: pointer;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -106,6 +113,7 @@ button {
 }
 .pages-navigator .next {
   width: 100px;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   .container {
