@@ -1,10 +1,10 @@
 :root {
-  --main-bckg-color: #fff3e3;
-  --second-bckg-color: #f9f1e7;
+  --main-bckg-color: #fcf4e9ff;
+  --second-bckg-color: #faf6f1ff;
   --heading-color: #3a3a3a;
-  --p-color: #898989;
-  --p-light-color: #9f9f9f;
-  --golden-color: #b88e2f;
+  --p-color: #696969;
+  --p-light-color: #707070;
+  --golden-color: #96721eff;
   --light-border-color: #d9d9d9;
 }
 * {
@@ -13,7 +13,7 @@
   padding: 0;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
 }
 section {
   padding: 50px 0;
@@ -45,18 +45,22 @@ button:not(nav button) {
   outline: none;
   padding: 10px 30px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
 }
 .btn {
   background-color: var(--golden-color);
   color: white;
+  /* font-size: 24px; */
+  /* margin: 10px; */
+  /* padding: 10px; */
 }
 .btn-light {
   color: var(--golden-color);
 }
 .btn a {
   color: white;
+  font-size: 24px;
 }
 nav button {
   border: none;

@@ -8,7 +8,7 @@
       "author": "Admin",
       "category": "Wood",
       "date": "14 Oct 2022",
-      "image": "assets/images/blog1.webp"
+      "image": "./assets/images/blog1.webp"
     },
     {
       "title": "Handmade pieces that took time to make",
@@ -18,7 +18,7 @@
       "author": "Admin",
       "category": "Handmade",
       "date": "14 Oct 2022",
-      "image": "assets/images/blog2.webp"
+      "image": "./assets/images/blog2.webp"
     },
     {
       "title": "Exploring new ways of decorating",
@@ -28,7 +28,7 @@
       "author": "Admin",
       "category": "Wood",
       "date": "14 Oct 2022",
-      "image": "assets/images/blog3.webp"
+      "image": "./assets/images/blog3.webp"
     },
     {
       "title": "Handmade pieces that took time to make",
@@ -38,7 +38,7 @@
       "author": "Admin",
       "category": "Handmade",
       "date": "14 Oct 2022",
-      "image": "assets/images/blog2.webp"
+      "image": "./assets/images/blog2.webp"
     },
     {
       "title": "Exploring new ways of decorating",
@@ -48,7 +48,7 @@
       "author": "Admin",
       "category": "Wood",
       "date": "14 Oct 2022",
-      "image": "assets/images/blog3.webp"
+      "image": "./assets/images/blog3.webp"
     }
   ]
 }

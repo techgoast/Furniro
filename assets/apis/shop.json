@@ -5,7 +5,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "assets/images/product1.webp",
+      "image": "./assets/images/product1.webp",
       "discount": "-30%"
     },
     {
@@ -13,7 +13,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "assets/images/product2.webp",
+      "image": "./assets/images/product2.webp",
       "discount": ""
     },
     {
@@ -21,7 +21,7 @@
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product3.webp",
+      "image": "./assets/images/product3.webp",
       "discount": "-50%"
     },
     {
@@ -29,7 +29,7 @@
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product4.webp",
+      "image": "./assets/images/product4.webp",
       "discount": "New"
     },
     {
@@ -37,7 +37,7 @@
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product5.webp",
+      "image": "./assets/images/product5.webp",
       "discount": "New"
     },
     {
@@ -45,7 +45,7 @@
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product6.webp",
+      "image": "./assets/images/product6.webp",
       "discount": ""
     },
     {
@@ -53,7 +53,7 @@
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product7.webp",
+      "image": "./assets/images/product7.webp",
       "discount": "-50%"
     },
     {
@@ -61,7 +61,7 @@
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product8.webp",
+      "image": "./assets/images/product8.webp",
       "discount": "New"
     },
     {
@@ -69,7 +69,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "assets/images/product4.webp",
+      "image": "./assets/images/product4.webp",
       "discount": "-30%"
     },
     {
@@ -77,7 +77,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "assets/images/product8.webp",
+      "image": "./assets/images/product8.webp",
       "discount": ""
     },
     {
@@ -85,7 +85,7 @@
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product3.webp",
+      "image": "./assets/images/product3.webp",
       "discount": "-50%"
     },
     {
@@ -93,7 +93,7 @@
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product7.webp",
+      "image": "./assets/images/product7.webp",
       "discount": "New"
     },
     {
@@ -101,7 +101,7 @@
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product2.webp",
+      "image": "./assets/images/product2.webp",
       "discount": "New"
     },
     {
@@ -109,7 +109,7 @@
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product6.webp",
+      "image": "./assets/images/product6.webp",
       "discount": ""
     },
     {
@@ -117,7 +117,7 @@
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product1.webp",
+      "image": "./assets/images/product1.webp",
       "discount": "-50%"
     },
     {
@@ -125,7 +125,7 @@
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product5.webp",
+      "image": "./assets/images/product5.webp",
       "discount": "New"
     },
     {
@@ -133,7 +133,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "assets/images/product5.webp",
+      "image": "./assets/images/product5.webp",
       "discount": "-30%"
     },
     {
@@ -141,7 +141,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "assets/images/product1.webp",
+      "image": "./assets/images/product1.webp",
       "discount": ""
     },
     {
@@ -149,7 +149,7 @@
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product6.webp",
+      "image": "./assets/images/product6.webp",
       "discount": "-50%"
     },
     {
@@ -157,7 +157,7 @@
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product2.webp",
+      "image": "./assets/images/product2.webp",
       "discount": "New"
     },
     {
@@ -165,7 +165,7 @@
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product7.webp",
+      "image": "./assets/images/product7.webp",
       "discount": "New"
     },
     {
@@ -173,7 +173,7 @@
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product3.webp",
+      "image": "./assets/images/product3.webp",
       "discount": ""
     },
     {
@@ -181,7 +181,7 @@
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product8.webp",
+      "image": "./assets/images/product8.webp",
       "discount": "-50%"
     },
     {
@@ -189,7 +189,7 @@
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product4.webp",
+      "image": "./assets/images/product4.webp",
       "discount": "New"
     },
     {
@@ -197,7 +197,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "assets/images/product3.webp",
+      "image": "./assets/images/product3.webp",
       "discount": "-30%"
     },
     {
@@ -205,7 +205,7 @@
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "assets/images/product7.webp",
+      "image": "./assets/images/product7.webp",
       "discount": ""
     },
     {
@@ -213,7 +213,7 @@
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product2.webp",
+      "image": "./assets/images/product2.webp",
       "discount": "-50%"
     },
     {
@@ -221,7 +221,7 @@
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product6.webp",
+      "image": "./assets/images/product6.webp",
       "discount": "New"
     },
     {
@@ -229,7 +229,7 @@
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product4.webp",
+      "image": "./assets/images/product4.webp",
       "discount": "New"
     },
     {
@@ -237,7 +237,7 @@
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "assets/images/product8.webp",
+      "image": "./assets/images/product8.webp",
       "discount": ""
     },
     {
@@ -245,7 +245,7 @@
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "assets/images/product5.webp",
+      "image": "./assets/images/product5.webp",
       "discount": "-50%"
     },
     {
@@ -253,7 +253,7 @@
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "assets/images/product1.webp",
+      "image": "./assets/images/product1.webp",
       "discount": "New"
     }
   ]

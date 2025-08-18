@@ -1,14 +1,17 @@
-let products = document.getElementById("products");
+let sizePicker = document.querySelectorAll("#size-pick div");
+let colorPicker = document.querySelectorAll("#color-pick div");
+let addForm = document.getElementById("add-form");
+let formRes = document.getElementById("form-res");
+let shareRes = document.getElementById("share-res");
+let platForms = document.querySelectorAll("#share-platform .platform");
+let categories = document.querySelectorAll("#categories div");
+let description = document.querySelectorAll("#desc div");
+let products = document.getElementById("related-products");
 let showMore = document.getElementById("show-more");
 let showLess = document.getElementById("show-less");
-let nextP = document.getElementById("nextP");
-let showIns = document.getElementById("showIns");
-let gallery = document.getElementById("gallery");
-let dots = document.getElementById("dots");
+
 
 let pros = [];
-let galleryData = [];
-let showImg = 0;
 
 function productUI(data) {
   data.forEach((element) => {
@@ -47,31 +50,12 @@ function productUI(data) {
   });
 }
 
-function showInsUI(img) {
-  showIns.innerHTML = `<img src="${img}" alt="${img}" />`;
-}
-
-function inspirationUI(data) {
-  galleryData.forEach((img) => {
-    gallery.innerHTML += `<img src="${img.first}" alt="${img.first}" />`;
-  });
-}
-
-function dotsUI(data) {
-  for (let i = 0; i < data.length; i++) {
-    dots.innerHTML += `<div class=${i === showImg ? "active" : ""}></div>`;
-  }
-}
 
 window.addEventListener("load", async () => {
   let res = await fetch("./assets/apis/home.json");
   let data = await res.json();
   pros = [...data.ourProducts];
-  galleryData = [...data.slider];
   productUI(pros.slice(0, 4));
-  showInsUI(galleryData[showImg].second);
-  inspirationUI(galleryData);
-  dotsUI(galleryData);
 });
 
 showMore.addEventListener("click", (e) => {
@@ -88,14 +72,55 @@ showLess.addEventListener("click", (e) => {
   showMore.parentElement.classList.toggle("hide");
 });
 
-nextP.addEventListener("click", () => {
-  showIns.innerHTML = "";
-  dots.innerHTML = "";
-  if (showImg < galleryData.length - 1) {
-    showImg += 1;
-  } else {
-    showImg = 0;
-  }
-  showInsUI(galleryData[showImg].second);
-  dotsUI(galleryData);
-});
+sizePicker.forEach(size => {
+  size.addEventListener("click", (e) => {
+    sizePicker.forEach(siz => {
+      siz.classList.remove("choosen");
+    })
+    e.target.classList.add("choosen");
+  })
+})
+
+colorPicker.forEach(color => {
+  color.addEventListener("click", (e) => {
+    colorPicker.forEach(col => {
+      col.classList.remove("choosen");
+    })
+    e.target.classList.add("choosen");
+  })
+})
+
+addForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  formRes.classList.remove("hide");
+})
+
+formRes.addEventListener("click", (e) => {
+  e.target.classList.add("hide");
+  location.href = "/cart.html";
+})
+
+shareRes.addEventListener("click", (e) => {
+  e.target.classList.add("hide");
+})
+
+platForms.forEach(platForm => {
+  platForm.addEventListener("click", () => {
+    shareRes.classList.remove("hide");
+  })
+})
+
+categories.forEach((category, i)=> {
+  category.addEventListener("click", (e) => {
+    categories.forEach(cat => {
+      cat.classList.remove("active");
+    })
+    description.forEach((div, j) => {
+      div.classList.remove("active");
+      if(i === j) {
+        div.classList.add("active");
+      }
+    })
+    e.target.classList.add("active");
+  })
+})

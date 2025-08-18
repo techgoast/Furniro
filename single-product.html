@@ -3,31 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is furniro single product details page" />
     <title>single product</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/single-product.css" />
+    <link rel="stylesheet" href="./assets/css/single-product2.css" />
   </head>
   <body>
     <nav>
       <div class="container">
         <div class="logo">
           <div class="image">
-            <img src="assets/images/logo.webp" alt="logo" />
+            <img src="./assets/images/logo.webp" alt="logo" />
           </div>
           <div class="text">Furniro</div>
         </div>
@@ -52,16 +37,16 @@
             </li>
           </ul>
           <div class="icons">
-            <button>
+            <button aria-label="nav-user">
               <i class="fa-solid fa-user"></i>
             </button>
-            <button>
+            <button aria-label="nav-search">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button>
+            <button aria-label="nav-like">
               <i class="fa-solid fa-heart"></i>
             </button>
-            <button class="cart-side" id="shopping-cart">
+            <button aria-label="nav-cart" class="cart-side" id="shopping-cart">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
             <div class="cart-side-bar" id="cart-side-bar">
@@ -71,7 +56,8 @@
                   <div class="product">
                     <div class="image">
                       <img
-                        src="assets/images/cart-side-bar1.webp"
+                        loading="lazy"
+                        src="./assets/images/cart-side-bar1.webp"
                         alt="cart-side-bar1"
                       />
                     </div>
@@ -86,7 +72,8 @@
                   <div class="product">
                     <div class="image">
                       <img
-                        src="assets/images/cart-side-bar2.webp"
+                        loading="lazy"
+                        src="./assets/images/cart-side-bar2.webp"
                         alt="cart-side-bar2"
                       />
                     </div>
@@ -129,21 +116,21 @@
         <div class="images">
           <div class="side-images">
             <div class="photo">
-              <img src="assets/images/single-side1.webp" alt="single-side1" />
+              <img src="./assets/images/single-side1.webp" alt="single-side1" />
             </div>
             <div class="photo">
-              <img src="assets/images/single-side2.webp" alt="single-side2" />
+              <img src="./assets/images/single-side2.webp" alt="single-side2" />
             </div>
             <div class="photo">
-              <img src="assets/images/single-side3.webp" alt="single-side3" />
+              <img src="./assets/images/single-side3.webp" alt="single-side3" />
             </div>
             <div class="photo">
-              <img src="assets/images/single-side4.webp" alt="single-side4" />
+              <img src="./assets/images/single-side4.webp" alt="single-side4" />
             </div>
           </div>
           <div class="main-image">
             <img
-              src="assets/images/single-side-main.webp"
+              src="./assets/images/single-side-main.webp"
               alt="single-side-main"
             />
           </div>
@@ -168,22 +155,22 @@
           </p>
           <div class="size">
             <h3>Size</h3>
-            <div class="size-pick">
-              <div class="size1 choosen">L</div>
-              <div class="size2">XL</div>
-              <div class="size3">XS</div>
+            <div class="size-pick" id="size-pick">
+              <div class="size1 choosen" id="size-l">L</div>
+              <div class="size2" id="size-xl">XL</div>
+              <div class="size3" id="size-xs">XS</div>
             </div>
           </div>
           <div class="color">
             <h3>Color</h3>
-            <div class="color-pick">
-              <div class="color1"></div>
-              <div class="color2"></div>
-              <div class="color3"></div>
+            <div class="color-pick" id="color-pick">
+              <div class="color1 choosen" id="color-violet"></div>
+              <div class="color2" id="color-black"></div>
+              <div class="color3" id="color-golden"></div>
             </div>
           </div>
-          <form action="cart.html">
-            <input type="number" value="1" id="quantity" name="quantity" />
+          <form action="" id="add-form">
+            <input type="number" value="1" id="quantity" name="quantity" aria-label="quantity"/>
             <input type="submit" value="Add To Cart" />
           </form>
           <div class="info">
@@ -192,46 +179,98 @@
             <div class="tags">
               <span>Tags</span> : &nbsp;Sofa, Chair, Home, Shop
             </div>
-            <div class="share">
+            <div class="share" id="share-platform">
               <span>Share</span> : &nbsp;
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-linkedin"></i>
-              <i class="fa-brands fa-twitter"></i>
+              <span class="platform face"><i class="fa-brands fa-facebook"></i></span>
+              <span class="platform linked"><i class="fa-brands fa-linkedin"></i></span>
+              <span class="platform twitter"><i class="fa-brands fa-twitter"></i></span>
             </div>
           </div>
         </div>
       </div>
+      <div id="form-res" class="form-res hide">
+        <div id="res-success" class="res-success">Your Choosen Product Has Been Added Successfully To Your Shopping Cart</div>
+      </div>
+      <div id="share-res" class="share-res hide">
+        <div id="share-success" class="share-success">Shared Successfully</div>
+      </div>
     </section>
     <section class="description">
       <div class="container">
-        <div class="categories">
+        <div class="categories" id="categories">
           <div class="active">Description</div>
           <div>Additional Information</div>
           <div>Reviews [5]</div>
         </div>
-        <div class="desc">
-          <p>
-            Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn
-            portable active stereo speaker takes the unmistakable look and sound
-            of Marshall, unplugs the chords, and takes the show on the road.
-          </p>
-          <p>
-            Weighing in under 7 pounds, the Kilburn is a lightweight piece of
-            vintage styled engineering. Setting the bar as one of the loudest
-            speakers in its class, the Kilburn is a compact, stout-hearted hero
-            with a well-balanced audio which boasts a clear midrange and
-            extended highs for a sound that is both articulate and pronounced.
-            The analogue knobs allow you to fine tune the controls to your
-            personal preferences while the guitar-influenced leather strap
-            enables easy and stylish travel.
-          </p>
+        <div class="desc" id="desc">
+          <div class="active">
+            <p>
+              Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn
+              portable active stereo speaker takes the unmistakable look and sound
+              of Marshall, unplugs the chords, and takes the show on the road.
+            </p>
+            <p>
+              Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+              vintage styled engineering. Setting the bar as one of the loudest
+              speakers in its class, the Kilburn is a compact, stout-hearted hero
+              with a well-balanced audio which boasts a clear midrange and
+              extended highs for a sound that is both articulate and pronounced.
+              The analogue knobs allow you to fine tune the controls to your
+              personal preferences while the guitar-influenced leather strap
+              enables easy and stylish travel.
+            </p>
+          </div>
+          <div class="">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nisi repudiandae officia! Culpa assumenda necessitatibus itaque! Excepturi repudiandae similique vitae omnis necessitatibus. Sunt modi voluptatem nulla fugiat itaque cumque sequi!
+            </p>
+          </div>
+          <div class="reviews">
+            <p class="review">
+              Review1 : 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="review">
+              Review2 : 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="review">
+              Review3 : 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="review">
+              Review4 : 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+            <p class="review">
+              Review5 : 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </p>
+          </div>
         </div>
         <div class="images">
           <div class="image">
-            <img src="assets/images/single-desc1.webp" alt="single-desc1" />
+            <img src="./assets/images/single-desc1.webp" alt="single-desc1" />
           </div>
           <div class="image">
-            <img src="assets/images/single-desc2.webp" alt="single-desc2" />
+            <img src="./assets/images/single-desc2.webp" alt="single-desc2" />
           </div>
         </div>
       </div>
@@ -239,62 +278,13 @@
     <section class="related-products">
       <div class="container">
         <h2>Related Products</h2>
-        <div class="products">
-          <div class="product" data-before="" dicount="-30%">
-            <div class="image">
-              <img src="assets/images/product1.webp" alt="product1" />
-            </div>
-            <div class="content">
-              <h3>Syltherine</h3>
-              <p>Stylish cafe chair</p>
-              <p class="price">
-                <span>Rp 2.500.000</span>
-                <span>Rp 3.500.000</span>
-              </p>
-            </div>
-          </div>
-          <div class="product">
-            <div class="image">
-              <img src="assets/images/product2.webp" alt="product2" />
-            </div>
-            <div class="content">
-              <h3>Leviosa</h3>
-              <p>Stylish cafe chair</p>
-              <p class="price">
-                <span>Rp 2.500.000</span>
-                <span></span>
-              </p>
-            </div>
-          </div>
-          <div class="product" data-before="" dicount="-50%">
-            <div class="image">
-              <img src="assets/images/product3.webp" alt="product3" />
-            </div>
-            <div class="content">
-              <h3>Lolito</h3>
-              <p>Luxury big sofa</p>
-              <p class="price">
-                <span>Rp 7.000.000</span>
-                <span>Rp 14.000.000</span>
-              </p>
-            </div>
-          </div>
-          <div class="product" data-before="" dicount="New">
-            <div class="image">
-              <img src="assets/images/product4.webp" alt="product4" />
-            </div>
-            <div class="content">
-              <h3>Respira</h3>
-              <p>Outdoor bar table and stool</p>
-              <p class="price">
-                <span>Rp 500.000</span>
-                <span></span>
-              </p>
-            </div>
-          </div>
+        <div class="products" id="related-products">
         </div>
         <div class="show-more">
-          <button class="btn-light">Show More</button>
+          <button class="btn-light" id="show-more">Show More</button>
+        </div>
+        <div class="show-less hide">
+          <button class="btn-light" id="show-less">Show Less</button>
         </div>
       </div>
     </section>
@@ -305,19 +295,23 @@
             <h2>Funiro.</h2>
             <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
           </div>
-          <ul class="links">
+          <div class="llist">
             <h3>Links</h3>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.hml">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <ul class="help">
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.hml">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="llist">
             <h3>Help</h3>
-            <li><a href="#">Payment Options</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Privacy Policies</a></li>
-          </ul>
+            <ul class="help">
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
           <div class="subscribe">
             <h3>Newsletter</h3>
             <form action="" id="subscribe-form">
@@ -349,5 +343,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./assets/js/nav.js"></script>
+    <script src="./assets/js/single-product.js"></script>
   </body>
 </html>

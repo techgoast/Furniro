@@ -24,7 +24,7 @@ function productUI(data) {
           <img src="${element.image}" alt="${element.title} img" />
         </div>
         <div class="content">
-          <h3>${element.title}</h3>
+          <h2>${element.title}</h2>
           <p>${element.desc}</p>
           <p class="price">
             <span>Rp ${element.currentPrice.toLocaleString()}</span>
@@ -36,7 +36,7 @@ function productUI(data) {
           </p>
         </div>
         <div class="over-lay">
-          <button class="btn-light">Add to cart</button>
+          <button class="btn-light">Product Details</button>
           <div class="options">
             <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
             <span><i class="fa-solid fa-code-compare"></i>compare</span>
@@ -57,12 +57,12 @@ function paginationUI(count) {
 }
 
 window.addEventListener("load", async () => {
-  let res = await fetch("/assets/apis/shop.json");
+  let res = await fetch("./assets/apis/shop.json");
   let data = await res.json();
   pros = [...data.products];
   pagesCount = Math.ceil(pros.length / +num.value);
-  filterCount.innerText += num.value;
-  allProducts.innerText += pros.length;
+  filterCount.innerHTML = num.value;
+  allProducts.innerHTML = pros.length;
   productUI(pros.slice(start, end));
   paginationUI(pagesCount);
 });
@@ -89,11 +89,11 @@ next.addEventListener("click", () => {
 num.addEventListener("change", () => {
   products.innerHTML = "";
   pagination.innerHTML = "";
-  filterCount.innerText = "";
-  allProducts.innerText = "";
+  filterCount.innerHTML = "";
+  allProducts.innerHTML = "";
 
-  filterCount.innerText += num.value;
-  allProducts.innerText += pros.length;
+  filterCount.innerHTML += num.value;
+  allProducts.innerHTML += pros.length;
 
   start = 0;
   end = +num.value;

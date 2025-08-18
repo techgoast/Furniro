@@ -5,7 +5,7 @@ let total = document.getElementById("total");
 let cartData = [];
 
 window.addEventListener("load", async () => {
-  let res = await fetch("/assets/apis/cart.json");
+  let res = await fetch("./assets/apis/cart.json");
   let data = await res.json();
   cartData = [...data.orders];
   cartUI(cartData);
@@ -29,12 +29,12 @@ function cartUI(data) {
         <td>
           <input type="text" id="quantity${i}" name="quantity${i}" value="${
       data[i].quantity
-    }" />
+    }" aria-label="quantity${i}" />
         </td>
         <td id="total-price${i}">Rs. ${(
       data[i].quantity * data[i].price
     ).toLocaleString()}</td>
-        <td><i class="fa-solid fa-trash"></i></td>
+        <td class="delete-item"><i class="fa-solid fa-trash"></i></td>
       </tr>
     `;
   }
@@ -51,9 +51,16 @@ function totalUI(data) {
 
 function assignEvents(data) {
   let inputs = document.querySelectorAll("td input");
+  let deleteBtns = document.querySelectorAll("td.delete-item");
   inputs.forEach((input, i) => {
     input.addEventListener("change", (e) => {
       handleChange(i, data, e.target.value);
+    });
+  });
+  deleteBtns.forEach((Btn, i) => {
+    Btn.addEventListener("click", () => {
+      console.log("clicked");
+      handleDelete(i, data);
     });
   });
 }
@@ -61,6 +68,18 @@ function assignEvents(data) {
 function handleChange(i, data, n) {
   data = data.map((item, j) => {
     return j === i ? { ...item, quantity: n } : item;
+  });
+  cartData = [...data];
+  cartBody.innerHTML = "";
+  subTotal.innerHTML = "";
+  total.innerHTML = "";
+  cartUI(cartData);
+  totalUI(cartData);
+}
+
+function handleDelete(i, data) {
+  data = data.filter((item, j) => {
+    return j !== i;
   });
   cartData = [...data];
   cartBody.innerHTML = "";

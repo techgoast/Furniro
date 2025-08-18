@@ -5,32 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="this is furniro blog page" />
     <title>Blog</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/page-header.css" />
-    <link rel="stylesheet" href="assets/css/features.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link rel="stylesheet" href="./assets/css/blog2.css" />
   </head>
   <body>
     <nav>
       <div class="container">
         <div class="logo">
           <div class="image">
-            <img src="assets/images/logo.webp" alt="logo" />
+            <img src="./assets/images/logo.webp" alt="logo" />
           </div>
           <div class="text">Furniro</div>
         </div>
@@ -55,16 +37,16 @@
             </li>
           </ul>
           <div class="icons">
-            <button>
+            <button aria-label="nav-user">
               <i class="fa-solid fa-user"></i>
             </button>
-            <button>
+            <button aria-label="nav-search">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button>
+            <button aria-label="nav-like">
               <i class="fa-solid fa-heart"></i>
             </button>
-            <button class="cart-side" id="shopping-cart">
+            <button aria-label="nav-cart" class="cart-side" id="shopping-cart">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
             <div class="cart-side-bar" id="cart-side-bar">
@@ -74,7 +56,8 @@
                   <div class="product">
                     <div class="image">
                       <img
-                        src="assets/images/cart-side-bar1.webp"
+                        loading="lazy"
+                        src="./assets/images/cart-side-bar1.webp"
                         alt="cart-side-bar1"
                       />
                     </div>
@@ -89,7 +72,8 @@
                   <div class="product">
                     <div class="image">
                       <img
-                        src="assets/images/cart-side-bar2.webp"
+                        loading="lazy"
+                        src="./assets/images/cart-side-bar2.webp"
                         alt="cart-side-bar2"
                       />
                     </div>
@@ -121,7 +105,7 @@
     <header class="page-header">
       <div class="content">
         <div class="logo">
-          <img src="assets/images/logo.webp" alt="logo" />
+          <img src="./assets/images/logo.webp" alt="logo" />
         </div>
         <h1>Blog</h1>
         <div class="path">
@@ -132,7 +116,6 @@
     </header>
     <section class="blog">
       <div class="container">
-        <div class="articles" id="articles"></div>
         <aside>
           <form action="">
             <input
@@ -173,7 +156,10 @@
               <h3>Recent Posts</h3>
               <div class="post">
                 <div class="image">
-                  <img src="assets/images/aside-post1.webp" alt="aside-post1" />
+                  <img
+                    src="./assets/images/aside-post1.webp"
+                    alt="aside-post1"
+                  />
                 </div>
                 <div class="text">
                   <h4>Going all-in with millennial design</h4>
@@ -182,7 +168,10 @@
               </div>
               <div class="post">
                 <div class="image">
-                  <img src="assets/images/aside-post2.webp" alt="aside-post2" />
+                  <img
+                    src="./assets/images/aside-post2.webp"
+                    alt="aside-post2"
+                  />
                 </div>
                 <div class="text">
                   <h4>Exploring new ways of decorating</h4>
@@ -191,7 +180,10 @@
               </div>
               <div class="post">
                 <div class="image">
-                  <img src="assets/images/aside-post3.webp" alt="aside-post3" />
+                  <img
+                    src="./assets/images/aside-post3.webp"
+                    alt="aside-post3"
+                  />
                 </div>
                 <div class="text">
                   <h4>Handmade pieces that took time to make</h4>
@@ -200,7 +192,10 @@
               </div>
               <div class="post">
                 <div class="image">
-                  <img src="assets/images/aside-post4.webp" alt="aside-post4" />
+                  <img
+                    src="./assets/images/aside-post4.webp"
+                    alt="aside-post4"
+                  />
                 </div>
                 <div class="text">
                   <h4>Modern home in Milan</h4>
@@ -209,7 +204,10 @@
               </div>
               <div class="post">
                 <div class="image">
-                  <img src="assets/images/aside-post5.webp" alt="aside-post5" />
+                  <img
+                    src="./assets/images/aside-post5.webp"
+                    alt="aside-post5"
+                  />
                 </div>
                 <div class="text">
                   <h4>Colorful office redesign</h4>
@@ -219,6 +217,7 @@
             </section>
           </div>
         </aside>
+        <div class="articles" id="articles"></div>
       </div>
       <div class="pages-navigator parent">
         <div class="pages-navigator" id="pagination"></div>
@@ -266,19 +265,23 @@
             <h2>Funiro.</h2>
             <p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
           </div>
-          <ul class="links">
+          <div class="llist">
             <h3>Links</h3>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.hml">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <ul class="help">
+            <ul class="links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.hml">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="llist">
             <h3>Help</h3>
-            <li><a href="#">Payment Options</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Privacy Policies</a></li>
-          </ul>
+            <ul class="help">
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
           <div class="subscribe">
             <h3>Newsletter</h3>
             <form action="" id="subscribe-form">

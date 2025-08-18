@@ -4,13 +4,13 @@
       "product": "Asgaard sofa",
       "quantity": 1,
       "price": 2500,
-      "image": "assets/images/cart-side-bar1.webp"
+      "image": "./assets/images/cart-side-bar1.webp"
     },
     {
       "product": "Casaliving Wood",
       "quantity": 1,
       "price": 2700,
-      "image": "assets/images/cart-side-bar2.webp"
+      "image": "./assets/images/cart-side-bar2.webp"
     }
   ]
 }

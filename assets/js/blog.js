@@ -59,7 +59,7 @@ function paginationUI(count) {
 }
 
 window.addEventListener("load", async () => {
-  let res = await fetch("/assets/apis/blog.json");
+  let res = await fetch("./assets/apis/blog.json");
   let data = await res.json();
   arts = [...data.articles];
   pagesCount = Math.ceil(arts.length / 3);

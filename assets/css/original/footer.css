@@ -34,7 +34,7 @@ footer .data {
 footer .data div {
   width: 25%;
 }
-footer .data ul {
+footer .data .llist {
   width: 20%;
 }
 footer .logo p {
@@ -82,7 +82,7 @@ footer .copy-wright {
   footer .data div {
     width: calc((100% - 20px) / 2);
   }
-  footer .data ul {
+  footer .data .llist {
     width: calc((100% - 20px) / 2);
   }
 }
@@ -96,7 +96,7 @@ footer .copy-wright {
   footer .data div {
     width: calc(100% - 20px);
   }
-  footer .data ul {
+  footer .data .llist {
     width: calc(100% - 20px);
   }
 }
