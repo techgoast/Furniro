@@ -12,13 +12,14 @@ let pagesCount = 0;
 let nextPage = 1;
 
 function productUI(data) {
-  data.forEach((element) => {
+  data.forEach((element, i) => {
     products.innerHTML += `
       <a
         href="single-product.html"
         class="product"
         ${element.discount ? `data-before=""` : ""}
         ${element.discount ? `dicount="${element.discount}"` : ""}
+        id="link-${i}"
       >
         <div class="image">
           <img src="${element.image}" alt="${element.title} img" />
@@ -35,17 +36,12 @@ function productUI(data) {
             }</span>
           </p>
         </div>
-        <div class="over-lay">
-          <button class="btn-light">Product Details</button>
-          <div class="options">
-            <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-            <span><i class="fa-solid fa-code-compare"></i>compare</span>
-            <span><i class="fa-solid fa-heart"></i>like</span>
-          </div>
+        <div class="over-lay" id="over-lay-${i}">
         </div>
       </a>
     `;
   });
+  assignHover(data);
 }
 
 function paginationUI(count) {
@@ -56,15 +52,17 @@ function paginationUI(count) {
   }
 }
 
-window.addEventListener("load", async () => {
-  let res = await fetch("./assets/apis/shop.json");
-  let data = await res.json();
-  pros = [...data.products];
-  pagesCount = Math.ceil(pros.length / +num.value);
-  filterCount.innerHTML = num.value;
-  allProducts.innerHTML = pros.length;
-  productUI(pros.slice(start, end));
-  paginationUI(pagesCount);
+window.addEventListener("load", () => {
+  setTimeout(async() => {
+    let res = await fetch("./assets/apis/shop.json");
+    let data = await res.json();
+    pros = [...data.products];
+    pagesCount = Math.ceil(pros.length / +num.value);
+    filterCount.innerHTML = num.value;
+    allProducts.innerHTML = pros.length;
+    productUI(pros.slice(start, end));
+    paginationUI(pagesCount);
+  },0)
 });
 
 next.addEventListener("click", () => {
@@ -103,3 +101,20 @@ num.addEventListener("change", () => {
   productUI(pros.slice(start, end));
   paginationUI(pagesCount);
 });
+
+function assignHover(data) {
+  let overLayList = document.querySelectorAll("#products .over-lay");
+  overLayList.forEach(el => {
+    el.addEventListener("mouseover", () => {
+      el.innerHTML = "";
+      el.innerHTML += `
+        <button class="btn-light">Product Details</button>
+        <div class="options">
+          <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
+          <span><i class="fa-solid fa-code-compare"></i>compare</span>
+          <span><i class="fa-solid fa-heart"></i>like</span>
+        </div>
+      `
+    })
+  })
+}

@@ -14,13 +14,14 @@ let showLess = document.getElementById("show-less");
 let pros = [];
 
 function productUI(data) {
-  data.forEach((element) => {
+  data.forEach((element, i) => {
     products.innerHTML += `
       <a
         href="single-product.html"
         class="product"
         ${element.discount ? `data-before=""` : ""}
         ${element.discount ? `dicount="${element.discount}"` : ""}
+        id="link-${i}"
       >
         <div class="image">
           <img src="${element.image}" alt="${element.title} img" />
@@ -37,17 +38,12 @@ function productUI(data) {
             }</span>
           </p>
         </div>
-        <div class="over-lay">
-          <button class="btn-light">Product Details</button>
-          <div class="options">
-            <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-            <span><i class="fa-solid fa-code-compare"></i>compare</span>
-            <span><i class="fa-solid fa-heart"></i>like</span>
-          </div>
+        <div class="over-lay" id="over-lay-${i}">
         </div>
       </a>
     `;
   });
+  assignHover(data);
 }
 
 
@@ -124,3 +120,20 @@ categories.forEach((category, i)=> {
     e.target.classList.add("active");
   })
 })
+
+function assignHover(data) {
+  let overLayList = document.querySelectorAll("#related-products .over-lay");
+  overLayList.forEach(el => {
+    el.addEventListener("mouseover", () => {
+      el.innerHTML = "";
+      el.innerHTML += `
+        <button class="btn-light">Product Details</button>
+        <div class="options">
+          <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
+          <span><i class="fa-solid fa-code-compare"></i>compare</span>
+          <span><i class="fa-solid fa-heart"></i>like</span>
+        </div>
+      `
+    })
+  })
+}

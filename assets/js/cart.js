@@ -4,12 +4,14 @@ let total = document.getElementById("total");
 
 let cartData = [];
 
-window.addEventListener("load", async () => {
-  let res = await fetch("./assets/apis/cart.json");
-  let data = await res.json();
-  cartData = [...data.orders];
-  cartUI(cartData);
-  totalUI(cartData);
+window.addEventListener("load", () => {
+  setTimeout(async () => {
+    let res = await fetch("./assets/apis/cart.json");
+    let data = await res.json();
+    cartData = [...data.orders];
+    cartUI(cartData);
+    totalUI(cartData);
+  },0)
 });
 
 function cartUI(data) {
@@ -59,7 +61,6 @@ function assignEvents(data) {
   });
   deleteBtns.forEach((Btn, i) => {
     Btn.addEventListener("click", () => {
-      console.log("clicked");
       handleDelete(i, data);
     });
   });

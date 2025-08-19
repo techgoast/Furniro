@@ -11,13 +11,14 @@ let galleryData = [];
 let showImg = 0;
 
 function productUI(data) {
-  data.forEach((element) => {
+  data.forEach((element, i) => {
     products.innerHTML += `
       <a
         href="single-product.html"
         class="product"
         ${element.discount ? `data-before=""` : ""}
         ${element.discount ? `dicount="${element.discount}"` : ""}
+        id="link-${i}"
       >
         <div class="image">
           <img src="${element.image}" alt="${element.title} img" />
@@ -34,17 +35,12 @@ function productUI(data) {
             }</span>
           </p>
         </div>
-        <div class="over-lay">
-          <button class="btn-light">Product Details</button>
-          <div class="options">
-            <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-            <span><i class="fa-solid fa-code-compare"></i>compare</span>
-            <span><i class="fa-solid fa-heart"></i>like</span>
-          </div>
+        <div class="over-lay" id="over-lay-${i}">
         </div>
       </a>
     `;
   });
+  assignHover(data);
 }
 
 function showInsUI(img) {
@@ -63,15 +59,17 @@ function dotsUI(data) {
   }
 }
 
-window.addEventListener("load", async () => {
-  let res = await fetch("./assets/apis/home.json");
-  let data = await res.json();
-  pros = [...data.ourProducts];
-  galleryData = [...data.slider];
-  productUI(pros.slice(0, 4));
-  showInsUI(galleryData[showImg].second);
-  inspirationUI(galleryData);
-  dotsUI(galleryData);
+window.addEventListener("load", () => {
+  setTimeout(async () => {
+    let res = await fetch("./assets/apis/home.json");
+    let data = await res.json();
+    pros = [...data.ourProducts];
+    galleryData = [...data.slider];
+    productUI(pros.slice(0, 4));
+    showInsUI(galleryData[showImg].second);
+    inspirationUI(galleryData);
+    dotsUI(galleryData);
+  },0)
 });
 
 showMore.addEventListener("click", (e) => {
@@ -99,3 +97,20 @@ nextP.addEventListener("click", () => {
   showInsUI(galleryData[showImg].second);
   dotsUI(galleryData);
 });
+
+function assignHover(data) {
+  let overLayList = document.querySelectorAll("#products .over-lay");
+  overLayList.forEach(el => {
+    el.addEventListener("mouseover", () => {
+      el.innerHTML = "";
+      el.innerHTML += `
+        <button class="btn-light">Product Details</button>
+        <div class="options">
+          <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
+          <span><i class="fa-solid fa-code-compare"></i>compare</span>
+          <span><i class="fa-solid fa-heart"></i>like</span>
+        </div>
+      `
+    })
+  })
+}

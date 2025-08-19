@@ -58,13 +58,15 @@ function paginationUI(count) {
   }
 }
 
-window.addEventListener("load", async () => {
-  let res = await fetch("./assets/apis/blog.json");
-  let data = await res.json();
-  arts = [...data.articles];
-  pagesCount = Math.ceil(arts.length / 3);
-  aticlesUI(arts.slice(start, end));
-  paginationUI(pagesCount);
+window.addEventListener("load", () => {
+  setTimeout(async () => {
+    let res = await fetch("./assets/apis/blog.json");
+    let data = await res.json();
+    arts = [...data.articles];
+    pagesCount = Math.ceil(arts.length / 3);
+    aticlesUI(arts.slice(start, end));
+    paginationUI(pagesCount);
+  },0)
 });
 
 next.addEventListener("click", () => {

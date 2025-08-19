@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="this is furniro blog page" />
     <title>Blog</title>
+    <link rel="preload" as="style" href="./assets/css/blog2.css" />
+    <link rel="preload" as="script" href="./assets/js/blog.js" />
     <link rel="stylesheet" href="./assets/css/blog2.css" />
   </head>
   <body>
@@ -50,53 +52,6 @@
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
             <div class="cart-side-bar" id="cart-side-bar">
-              <div class="top">
-                <h2>Shopping Cart</h2>
-                <div class="cart-products">
-                  <div class="product">
-                    <div class="image">
-                      <img
-                        loading="lazy"
-                        src="./assets/images/cart-side-bar1.webp"
-                        alt="cart-side-bar1"
-                      />
-                    </div>
-                    <div class="info">
-                      <h3>Asgaard sofa</h3>
-                      <p>
-                        <span>1 x</span>
-                        <span>Rs. 2,500.00</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product">
-                    <div class="image">
-                      <img
-                        loading="lazy"
-                        src="./assets/images/cart-side-bar2.webp"
-                        alt="cart-side-bar2"
-                      />
-                    </div>
-                    <div class="info">
-                      <h3>Casaliving Wood</h3>
-                      <p>
-                        <span>1 x</span>
-                        <span>Rs. 2,700.00</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="bottom">
-                <p class="sub-total">
-                  <span>Subtotal</span>
-                  <span>Rs. 5,200.00</span>
-                </p>
-                <div class="actions">
-                  <a href="cart.html">Cart</a>
-                  <a href="check-out.html">Check Out</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -107,7 +62,7 @@
         <div class="logo">
           <img src="./assets/images/logo.webp" alt="logo" />
         </div>
-        <h1>Blog</h1>
+        <h2>Blog</h2>
         <div class="path">
           <span>Home <i class="fa-solid fa-angle-right"></i></span>
           <span>Blog</span>
@@ -128,7 +83,7 @@
           </form>
           <div class="sections-container">
             <section class="categories">
-              <h3>Categories</h3>
+              <h2>Categories</h2>
               <ul>
                 <li>
                   <span>Crafts</span>
@@ -153,7 +108,7 @@
               </ul>
             </section>
             <section class="posts">
-              <h3>Recent Posts</h3>
+              <h2>Recent Posts</h2>
               <div class="post">
                 <div class="image">
                   <img
@@ -162,7 +117,7 @@
                   />
                 </div>
                 <div class="text">
-                  <h4>Going all-in with millennial design</h4>
+                  <h3>Going all-in with millennial design</h3>
                   <span>03 Aug 2022</span>
                 </div>
               </div>
@@ -174,7 +129,7 @@
                   />
                 </div>
                 <div class="text">
-                  <h4>Exploring new ways of decorating</h4>
+                  <h3>Exploring new ways of decorating</h3>
                   <span>03 Aug 2022</span>
                 </div>
               </div>
@@ -186,7 +141,7 @@
                   />
                 </div>
                 <div class="text">
-                  <h4>Handmade pieces that took time to make</h4>
+                  <h3>Handmade pieces that took time to make</h3>
                   <span>03 Aug 2022</span>
                 </div>
               </div>
@@ -198,7 +153,7 @@
                   />
                 </div>
                 <div class="text">
-                  <h4>Modern home in Milan</h4>
+                  <h3>Modern home in Milan</h3>
                   <span>03 Aug 2022</span>
                 </div>
               </div>
@@ -210,7 +165,7 @@
                   />
                 </div>
                 <div class="text">
-                  <h4>Colorful office redesign</h4>
+                  <h3>Colorful office redesign</h3>
                   <span>03 Aug 2022</span>
                 </div>
               </div>
@@ -313,6 +268,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./assets/js/nav.js"></script>
-    <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/blog.js" defer></script>
   </body>
 </html>
