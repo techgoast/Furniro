@@ -93,6 +93,7 @@ addForm.addEventListener("submit", (e) => {
 
 formRes.addEventListener("click", (e) => {
   e.target.classList.add("hide");
+  location.href = "./cart.html";
 })
 
 shareRes.addEventListener("click", (e) => {
