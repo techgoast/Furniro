@@ -12,49 +12,46 @@
   <body>
     <nav>
       <div class="container">
+        <div class="menu" id="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div class="logo">
           <div class="image">
             <img src="./assets/images/logo.webp" alt="logo" />
           </div>
           <div class="text">Furniro</div>
         </div>
-        <div class="menu" id="nav-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="navigators" id="nav-navigator">
-          <ul class="links">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="shop.html">Shop</a>
-            </li>
-            <li>
-              <a href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-          <div class="icons">
-            <button aria-label="nav-user">
-              <i class="fa-solid fa-user"></i>
-            </button>
-            <button aria-label="nav-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button aria-label="nav-like">
-              <i class="fa-solid fa-heart"></i>
-            </button>
-            <button aria-label="nav-cart" class="cart-side" id="shopping-cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            <div class="cart-side-bar" id="cart-side-bar">
-            </div>
+        <ul class="links" id="links">
+          <li class="heading-li">Browse Furniro</li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="shop.html">Shop</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="icons">
+          <button aria-label="nav-search" id="nav-search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button aria-label="nav-cart" class="cart-side" id="shopping-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+          <div class="cart-side-bar" id="cart-side-bar">
           </div>
         </div>
+        <form class="nav-search" id="nav-search">
+          <input type="search" name="nav-search-input" class="nav-search-input" id="nav-search-input" placeholder="search our products">
+          <p class="nav-warning" id="nav-warning">you are searching an empty string</p>
+        </form>
       </div>
     </nav>
     <header class="page-header">
@@ -199,28 +196,8 @@
               <li><a href="#">Privacy Policies</a></li>
             </ul>
           </div>
-          <div class="subscribe">
-            <h3>Newsletter</h3>
-            <form action="" id="subscribe-form">
-              <input
-                type="email"
-                placeholder="Enter Your Email Address"
-                name="subscribe-email"
-                id="subscribe-email"
-              />
-              <input type="submit" value="SUBSCRIBE" />
-            </form>
-          </div>
         </div>
         <p class="copy-wright">2023 furino. All rights reverved</p>
-      </div>
-      <div id="subscribe-res" class="subscribe-res hide">
-        <div class="subscribe-success hide" id="subscribe-success">
-          Thank you For Your Subscribtion
-        </div>
-        <div class="subscribe-failed hide" id="subscribe-failed">
-          Please Enter Your Email
-        </div>
       </div>
     </footer>
     <script src="./assets/js/fontawesome.min.js"></script>

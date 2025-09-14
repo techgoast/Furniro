@@ -36,11 +36,11 @@ function productUI(data) {
           </p>
         </div>
         <div class="over-lay" id="over-lay-${i}">
+          <button class="btn-light">Product Details</button>
         </div>
       </a>
     `;
   });
-  assignHover(data);
 }
 
 function showInsUI(img) {
@@ -98,19 +98,31 @@ nextP.addEventListener("click", () => {
   dotsUI(galleryData);
 });
 
-function assignHover(data) {
-  let overLayList = document.querySelectorAll("#products .over-lay");
-  overLayList.forEach(el => {
-    el.addEventListener("mouseover", () => {
-      el.innerHTML = "";
-      el.innerHTML += `
-        <button class="btn-light">Product Details</button>
-        <div class="options">
-          <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-          <span><i class="fa-solid fa-code-compare"></i>compare</span>
-          <span><i class="fa-solid fa-heart"></i>like</span>
-        </div>
-      `
-    })
-  })
-}
+// function assignHover() {
+//   let overLayList = document.querySelectorAll("#products .over-lay");
+//   overLayList.forEach(el => {
+//     el.addEventListener("mouseover", () => {
+//       el.innerHTML = "";
+//       el.innerHTML += `
+//         <button class="btn-light">Product Details</button>
+//         <div class="options">
+//           <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
+//           <span><i class="fa-solid fa-code-compare"></i>compare</span>
+//           <span><i class="fa-solid fa-heart"></i>like</span>
+//         </div>
+//       `
+//     })
+//   })
+//   assignOvelayBtnClick()
+// }
+
+// function assignOvelayBtnClick() {
+//   let overLayBtns = document.querySelectorAll("#products .over-lay button");
+//   overLayBtns.forEach(el => {
+//     console.log(el);
+//     el.addEventListener("click", (e) => {
+//      console.log("hello")
+//      console.log(e.target)
+//     })
+//   })
+// }
