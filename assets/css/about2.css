@@ -1,4 +1,3 @@
-/* @format */
 :root {
   --main-bckg-color: #fcf4e9ff;
   --second-bckg-color: #faf6f1ff;
@@ -464,6 +463,9 @@ footer .copy-wright {
   }
   footer .data .llist {
     width: calc(100% - 20px);
+  }
+  footer .data .llist h3 {
+    margin-top: 20px;
   }
   .page-header {
     background-image: url(../images/header2.webp);

@@ -78,13 +78,14 @@ navSearchIcon.addEventListener("click", () => {
     location.href = "./single-product.html"
   }
 });
+
 navSearch.addEventListener("submit", (e) => {
     e.preventDefault()
     if (navSearchInput.value === "") {
     navSearchWarning.classList.add("show");
     navSearchInput.blur()
   } else {
-    location.href = "./single-product.html"
+    location.href = `./single-product.html?productName=${navSearchInput.value}`
   }
 });
 

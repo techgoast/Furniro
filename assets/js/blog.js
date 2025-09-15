@@ -99,6 +99,7 @@ next.addEventListener("click", () => {
     aticlesUI(arts.slice(start, end));
   }
   paginationUI(pagesCount);
+  articles.scrollIntoView({behavior:"smooth"})
 });
 
 search.addEventListener("change", (e) => {

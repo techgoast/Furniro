@@ -1,259 +1,291 @@
 {
   "products": [
     {
+      "id": 1,
       "title": "Syltherine",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "./assets/images/product1.webp",
+      "image": "./assets/images/product1-single-small.webp",
       "discount": "-30%"
     },
     {
+      "id": 2,
       "title": "Leviosa",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "./assets/images/product2.webp",
+      "image": "./assets/images/product2-single-small.webp",
       "discount": ""
     },
     {
+      "id": 3,
       "title": "Lolito",
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product3.webp",
+      "image": "./assets/images/product3-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 4,
       "title": "Respira",
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product4.webp",
+      "image": "./assets/images/product4-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 5,
       "title": "Grifo",
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product5.webp",
+      "image": "./assets/images/product5-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 6,
       "title": "Muggo",
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product6.webp",
+      "image": "./assets/images/product6-single-small.webp",
       "discount": ""
     },
     {
+      "id": 7,
       "title": "Pingky",
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product7.webp",
+      "image": "./assets/images/product7-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 8,
       "title": "Potty",
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product8.webp",
+      "image": "./assets/images/product8-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 9,
       "title": "Syltherine",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "./assets/images/product4.webp",
+      "image": "./assets/images/product4-single-small.webp",
       "discount": "-30%"
     },
     {
+      "id": 10,
       "title": "Leviosa",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "./assets/images/product8.webp",
+      "image": "./assets/images/product8-single-small.webp",
       "discount": ""
     },
     {
+      "id": 11,
       "title": "Lolito",
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product3.webp",
+      "image": "./assets/images/product3-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 12,
       "title": "Respira",
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product7.webp",
+      "image": "./assets/images/product7-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 13,
       "title": "Grifo",
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product2.webp",
+      "image": "./assets/images/product2-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 14,
       "title": "Muggo",
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product6.webp",
+      "image": "./assets/images/product6-single-small.webp",
       "discount": ""
     },
     {
+      "id": 15,
       "title": "Pingky",
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product1.webp",
+      "image": "./assets/images/product1-single-small.webp",
       "discount": "-50%"
     },
     {
-      "title": "Potty",
-      "desc": "Minimalist flower pot",
-      "currentPrice": 500,
-      "previousPrice": 0,
-      "image": "./assets/images/product5.webp",
-      "discount": "New"
-    },
-    {
+      "id": 16,
       "title": "Syltherine",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "./assets/images/product5.webp",
+      "image": "./assets/images/product5-single-small.webp",
       "discount": "-30%"
     },
     {
+      "id": 17,
       "title": "Leviosa",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "./assets/images/product1.webp",
+      "image": "./assets/images/product1-single-small.webp",
       "discount": ""
     },
     {
+      "id": 18,
       "title": "Lolito",
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product6.webp",
+      "image": "./assets/images/product6-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 19,
       "title": "Respira",
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product2.webp",
+      "image": "./assets/images/product2-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 20,
       "title": "Grifo",
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product7.webp",
+      "image": "./assets/images/product7-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 21,
       "title": "Muggo",
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product3.webp",
+      "image": "./assets/images/product3-single-small.webp",
       "discount": ""
     },
     {
+      "id": 22,
       "title": "Pingky",
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product8.webp",
+      "image": "./assets/images/product8-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 23,
       "title": "Potty",
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product4.webp",
+      "image": "./assets/images/product4-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 24,
       "title": "Syltherine",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 3500,
-      "image": "./assets/images/product3.webp",
+      "image": "./assets/images/product3-single-small.webp",
       "discount": "-30%"
     },
     {
+      "id": 25,
       "title": "Leviosa",
       "desc": "Stylish cafe chair",
       "currentPrice": 2500,
       "previousPrice": 0,
-      "image": "./assets/images/product7.webp",
+      "image": "./assets/images/product7-single-small.webp",
       "discount": ""
     },
     {
+      "id": 26,
       "title": "Lolito",
       "desc": "Luxury big sofa",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product2.webp",
+      "image": "./assets/images/product2-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 27,
       "title": "Respira",
       "desc": "Outdoor bar table and stool",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product6.webp",
+      "image": "./assets/images/product6-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 28,
       "title": "Grifo",
       "desc": "Night lamp",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product4.webp",
+      "image": "./assets/images/product4-single-small.webp",
       "discount": "New"
     },
     {
+      "id": 29,
       "title": "Muggo",
       "desc": "Small mug",
       "currentPrice": 1500,
       "previousPrice": 0,
-      "image": "./assets/images/product8.webp",
+      "image": "./assets/images/product8-single-small.webp",
       "discount": ""
     },
     {
+      "id": 30,
       "title": "Pingky",
       "desc": "Cute bed set",
       "currentPrice": 7000,
       "previousPrice": 14000,
-      "image": "./assets/images/product5.webp",
+      "image": "./assets/images/product5-single-small.webp",
       "discount": "-50%"
     },
     {
+      "id": 31,
       "title": "Potty",
       "desc": "Minimalist flower pot",
       "currentPrice": 500,
       "previousPrice": 0,
-      "image": "./assets/images/product1.webp",
+      "image": "./assets/images/product1-single-small.webp",
+      "discount": "New"
+    },
+    {
+      "id": 32,
+      "title": "Potty",
+      "desc": "Minimalist flower pot",
+      "currentPrice": 500,
+      "previousPrice": 0,
+      "image": "./assets/images/product5-single-small.webp",
       "discount": "New"
     }
   ]

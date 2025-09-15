@@ -1,46 +1,34 @@
 let myForm = document.getElementById("my-form");
 let myFormInputs = myForm.querySelectorAll("input, textarea");
-let formRes = document.getElementById("form-res");
-let formSuccess = document.getElementById("form-success");
-let formFailed = document.getElementById("form-failed");
+let myFormWarnings = myForm.querySelectorAll(".input-warning");
 
-let succeeded = true;
-
+let valid = true;
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let formData = new FormData(myForm);
-  let formObj = Object.fromEntries(formData.entries());
-  for (const value of Object.values(formObj)) {
-    if (value === "") {
-      succeeded = false;
+  myFormInputs.forEach(input => {
+    if (input.value === "") {
+      valid = false
+      input.nextElementSibling.classList.add("show");
+      input.scrollIntoView({behavior: "smooth"})
+    } 
+  })
+  if (valid) {
+      location.href = "./index.html"
     }
-  }
-  if (!succeeded) {
-    formFailed.classList.remove("hide");
-  } else {
-    formSuccess.innerHTML += `
-      <p>Hello ${formObj.fname} ${formObj.lname}</p>
-      <p>Your data has been successfully submitted</p>
-      <p>We will send your order at ${formObj.address}</p>
-  `;
-    formSuccess.classList.remove("hide");
-  }
-  formRes.classList.remove("hide");
 });
 
-formRes.addEventListener("click", (e) => {
-  formSuccess.innerHTML = "";
-  formFailed.classList.add("hide");
-  formSuccess.classList.add("hide");
-  e.target.classList.add("hide");
-  myFormInputs.forEach((input) => {
-    if (
-      input.id !== "submit-btn" &&
-      input.name !== "transfer-method" &&
-      succeeded
-    ) {
-      input.value = "";
-    }
-  });
-  succeeded = true;
-});
+myFormInputs.forEach(input => {
+  if (input.type !== "radio" && input.type !== "submit") {
+    input.addEventListener("focus", (e) => {
+    valid = true
+    e.target.nextElementSibling.classList.remove("show")
+  })
+  }
+})
+
+myFormWarnings.forEach(warn => {
+    warn.addEventListener("click", (e) => {
+    valid = true
+    e.target.classList.remove("show")
+  })
+})

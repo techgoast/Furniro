@@ -107,6 +107,7 @@
           <form action="" id="my-form">
             <label for="uname">Your Name</label>
             <input type="text" id="uname" name="uname" placeholder="Abc" />
+            <div class="input-warning">please fill this field</div>
             <label for="mailaddress">Email address</label>
             <input
               type="email"
@@ -114,27 +115,24 @@
               name="mailaddress"
               placeholder="Abc@def.com"
             />
+            <div class="input-warning">please fill this field</div>
             <label for="subj">Subject</label>
             <input
               type="text"
               id="subj"
               name="subj"
-              placeholder="This is an optional"
+              placeholder="Subject"
             />
+            <div class="input-warning">please fill this field</div>
             <label for="msg">Message</label>
             <textarea
               id="msg"
               name="msg"
               placeholder="Hi! i'd like to ask about"
             ></textarea>
+            <div class="input-warning">please fill this field</div>
             <input class="btn" type="submit" value="submit" id="submit-btn" />
           </form>
-        </div>
-      </div>
-      <div class="form-res hide" id="form-res">
-        <div class="form-success hide" id="form-success"></div>
-        <div class="form-failed hide" id="form-failed">
-          Please fill all fields
         </div>
       </div>
     </section>

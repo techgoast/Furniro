@@ -27,13 +27,13 @@ function cartUI(data) {
           </div>
           <span>${data[i].product}</span>
         </td>
-        <td>Rs. ${data[i].price}</td>
+        <td>$ ${data[i].price}</td>
         <td>
-          <input type="text" id="quantity${i}" name="quantity${i}" value="${
+          <input type="number" id="quantity${i}" name="quantity${i}" value="${
       data[i].quantity
-    }" aria-label="quantity${i}" />
+    }" aria-label="quantity${i}" min=1 />
         </td>
-        <td id="total-price${i}">Rs. ${(
+        <td id="total-price${i}">$ ${(
       data[i].quantity * data[i].price
     ).toLocaleString()}</td>
         <td class="delete-item"><i class="fa-solid fa-trash"></i></td>
@@ -47,8 +47,8 @@ function totalUI(data) {
   let totalAmount = data.reduce((acc, item) => {
     return acc + item.quantity * item.price;
   }, 0);
-  subTotal.innerHTML += `Rs ${totalAmount.toLocaleString()}`;
-  total.innerHTML += `Rs ${totalAmount.toLocaleString()}`;
+  subTotal.innerHTML += `$ ${totalAmount.toLocaleString()}`;
+  total.innerHTML += `$ ${totalAmount.toLocaleString()}`;
 }
 
 function assignEvents(data) {

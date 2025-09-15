@@ -14,7 +14,7 @@ function productUI(data) {
   data.forEach((element, i) => {
     products.innerHTML += `
       <a
-        href="single-product.html"
+        href="./single-product.html?productName=${element.title}&productId=${element.id}"
         class="product"
         ${element.discount ? `data-before=""` : ""}
         ${element.discount ? `dicount="${element.discount}"` : ""}
@@ -27,10 +27,10 @@ function productUI(data) {
           <h3>${element.title}</h3>
           <p>${element.desc}</p>
           <p class="price">
-            <span>Rp ${element.currentPrice.toLocaleString()}</span>
+            <span>$ ${element.currentPrice.toLocaleString()}</span>
             <span>${
               element.previousPrice
-                ? `Rp ${element.previousPrice.toLocaleString()}`
+                ? `$ ${element.previousPrice.toLocaleString()}`
                 : ""
             }</span>
           </p>
@@ -84,6 +84,7 @@ showLess.addEventListener("click", (e) => {
   productUI(pros.slice(0, 4));
   e.target.parentElement.classList.toggle("hide");
   showMore.parentElement.classList.toggle("hide");
+  products.scrollIntoView({behavior:"smooth"})
 });
 
 nextP.addEventListener("click", () => {
@@ -97,32 +98,3 @@ nextP.addEventListener("click", () => {
   showInsUI(galleryData[showImg].second);
   dotsUI(galleryData);
 });
-
-// function assignHover() {
-//   let overLayList = document.querySelectorAll("#products .over-lay");
-//   overLayList.forEach(el => {
-//     el.addEventListener("mouseover", () => {
-//       el.innerHTML = "";
-//       el.innerHTML += `
-//         <button class="btn-light">Product Details</button>
-//         <div class="options">
-//           <span><i class="fa-solid fa-square-share-nodes"></i>share</span>
-//           <span><i class="fa-solid fa-code-compare"></i>compare</span>
-//           <span><i class="fa-solid fa-heart"></i>like</span>
-//         </div>
-//       `
-//     })
-//   })
-//   assignOvelayBtnClick()
-// }
-
-// function assignOvelayBtnClick() {
-//   let overLayBtns = document.querySelectorAll("#products .over-lay button");
-//   overLayBtns.forEach(el => {
-//     console.log(el);
-//     el.addEventListener("click", (e) => {
-//      console.log("hello")
-//      console.log(e.target)
-//     })
-//   })
-// }
