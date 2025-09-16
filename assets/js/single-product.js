@@ -14,7 +14,7 @@ function productUI(data) {
   data.forEach((element, i) => {
     products.innerHTML += `
       <a
-        href="./single-product.html?productName=${element.title}"
+        href="./single-product.html?productName=${element.title}&productId=${element.id}"
         class="product"
         ${element.discount ? `data-before=""` : ""}
         ${element.discount ? `dicount="${element.discount}"` : ""}

@@ -469,7 +469,7 @@ nav .icons .cart-side-bar .bottom .actions a {
 .blog .container aside h2 {
   font-size: 20px;
 }
-.blog .container aside section ul li {
+.blog .container aside section ul li a{
   display: flex;
   justify-content: space-between;
   align-items: center;
