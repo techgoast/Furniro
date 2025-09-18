@@ -1,18 +1,4 @@
-let mainContainer = document.getElementById("main-container");
-let categories = document.querySelectorAll("#categories div");
-let description = document.querySelectorAll("#desc div");
-let pathTitle = document.getElementById("path-title");
-let products = document.getElementById("related-products");
-let showMore = document.getElementById("show-more");
-let showLess = document.getElementById("show-less");
-
-
-let pros = [];
-let targetProduct = {};
-
-function productUI(data) {
-  data.forEach((element, i) => {
-    products.innerHTML += `
+let mainContainer=document.getElementById("main-container");let categories=document.querySelectorAll("#categories div");let description=document.querySelectorAll("#desc div");let pathTitle=document.getElementById("path-title");let products=document.getElementById("related-products");let showMore=document.getElementById("show-more");let showLess=document.getElementById("show-less");let pros=[];let targetProduct={};function productUI(data){data.forEach((element,i)=>{products.innerHTML+=`
       <a
         href="./single-product.html?productName=${element.title}&productId=${element.id}"
         class="product"
@@ -39,12 +25,8 @@ function productUI(data) {
         <button class="btn-light">Product Details</button>
         </div>
       </a>
-    `;
-  });
-}
-
-function productDetailsUI(product) {
-  mainContainer.innerHTML += `
+    `})}
+function productDetailsUI(product){mainContainer.innerHTML+=`
     <div class="images">
       <div class="main-image">
         <img
@@ -100,80 +82,15 @@ function productDetailsUI(product) {
         </div>
       </div>
     </div>
-  `
-}
-
-function pathTitleText (product) {
-  pathTitle.innerText = product.title
-}
-
-window.addEventListener("load", async () => {
-  let params = new URLSearchParams(location.search)
-  let res = await fetch("./assets/apis/shop.json");
-  let data = await res.json();
-  pros = [...data.products];
-  targetProduct = pros.find((p) => p.title === params.get("productName") && p.id === +params.get("productId"))
-  targetProduct &&  pathTitleText (targetProduct);
-  targetProduct ? productDetailsUI(targetProduct) : mainContainer.innerHTML += `<div style="color:red">There Is No Product Match Your Search</div>`;
-  targetProduct && assignEvents() ;
-  productUI(pros.slice(0, 4));
-});
-
-showMore.addEventListener("click", (e) => {
-  products.innerHTML = "";
-  productUI(pros.slice(0,8));
-  e.target.parentElement.classList.toggle("hide");
-  showLess.parentElement.classList.toggle("hide");
-});
-
-showLess.addEventListener("click", (e) => {
-  products.innerHTML = "";
-  productUI(pros.slice(0, 4));
-  e.target.parentElement.classList.toggle("hide");
-  showMore.parentElement.classList.toggle("hide");
-  products.scrollIntoView({behavior:"smooth"})
-});
-
-function assignEvents() {
-  let sizePicker = document.querySelectorAll("#size-pick div");
-  let colorPicker = document.querySelectorAll("#color-pick div");
-  let addForm = document.getElementById("add-form");
-
-  sizePicker.forEach(size => {
-    size.addEventListener("click", (e) => {
-      sizePicker.forEach(siz => {
-        siz.classList.remove("choosen");
-      })
-      e.target.classList.add("choosen");
-    })
-  })
-
-  colorPicker.forEach(color => {
-    color.addEventListener("click", (e) => {
-      colorPicker.forEach(col => {
-        col.classList.remove("choosen");
-      })
-      e.target.classList.add("choosen");
-    })
-  })
-
-  addForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    location.href = "./cart.html";
-  })
-}
-
-categories.forEach((category, i)=> {
-  category.addEventListener("click", (e) => {
-    categories.forEach(cat => {
-      cat.classList.remove("active");
-    })
-    description.forEach((div, j) => {
-      div.classList.remove("active");
-      if(i === j) {
-        div.classList.add("active");
-      }
-    })
-    e.target.classList.add("active");
-  })
-})
+  `}
+function pathTitleText(product){pathTitle.innerText=product.title}
+window.addEventListener("load",async()=>{let params=new URLSearchParams(location.search)
+let res=await fetch("./assets/apis/shop.json");let data=await res.json();pros=[...data.products];targetProduct=pros.find((p)=>p.title===params.get("productName")&&p.id===+params.get("productId"))
+targetProduct&&pathTitleText(targetProduct);targetProduct?productDetailsUI(targetProduct):mainContainer.innerHTML+=`<div style="color:red">There Is No Product Match Your Search</div>`;targetProduct&&assignEvents();productUI(pros.slice(0,4))});showMore.addEventListener("click",(e)=>{products.innerHTML="";productUI(pros.slice(0,8));e.target.parentElement.classList.toggle("hide");showLess.parentElement.classList.toggle("hide")});showLess.addEventListener("click",(e)=>{products.innerHTML="";productUI(pros.slice(0,4));e.target.parentElement.classList.toggle("hide");showMore.parentElement.classList.toggle("hide");products.scrollIntoView({behavior:"smooth"})});function assignEvents(){let sizePicker=document.querySelectorAll("#size-pick div");let colorPicker=document.querySelectorAll("#color-pick div");let addForm=document.getElementById("add-form");sizePicker.forEach(size=>{size.addEventListener("click",(e)=>{sizePicker.forEach(siz=>{siz.classList.remove("choosen")})
+e.target.classList.add("choosen")})})
+colorPicker.forEach(color=>{color.addEventListener("click",(e)=>{colorPicker.forEach(col=>{col.classList.remove("choosen")})
+e.target.classList.add("choosen")})})
+addForm.addEventListener("submit",(e)=>{e.preventDefault();location.href="./cart.html"})}
+categories.forEach((category,i)=>{category.addEventListener("click",(e)=>{categories.forEach(cat=>{cat.classList.remove("active")})
+description.forEach((div,j)=>{div.classList.remove("active");if(i===j){div.classList.add("active")}})
+e.target.classList.add("active")})})
